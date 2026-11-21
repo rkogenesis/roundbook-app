@@ -1,0 +1,11 @@
+// Cloudflare Worker that serves the RoundBook website as static files (no server code).
+// Lives in website/ here; website/ is copied to the root of the public rkogenesis/roundbook-app repo;
+// Cloudflare Workers Builds deploys it on every push with `npx wrangler deploy`.
+// "name" must match the Worker's name in the Cloudflare dashboard.
+{
+  "name": "roundbook",
+  "compatibility_date": "2026-11-21",
+  "assets": {
+    "directory": "./site"
+  }
+}
